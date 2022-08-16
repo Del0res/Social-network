@@ -1,17 +1,13 @@
 import React from 'react';
-import MyPosts from './MyPosts/MyPosts';
 import s from './Profile.module.css';
+import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 
-const Profile = () => {
+const Profile = (props) => {
    return (
-      <div className={s.content}>
-         <div>
-            <img src="https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg" />
-         </div>
-         <div>
-            <img src="https://thumbs.dreamstime.com/b/young-man-standing-cliff-edge-celebrates-reaching-top-mountain-arms-air-shouting-young-man-cliff-edge-213584552.jpg" />
-         </div>
-         <MyPosts/>
+      <div>
+         <ProfileInfo />
+         <MyPosts postsData={props.state.postsData}/>
       </div>
    );
 }

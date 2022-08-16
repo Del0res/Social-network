@@ -3,16 +3,18 @@
   width: 1400px;
   margin: 0 auto;
 
-  grid-template-areas: 
-  "header header"
-  "nav content";
+  grid-template-areas:
+    "header header"
+    "nav content";
 
   /* 2 строки */
-  grid-template-rows: 60px 1fr; 
+  grid-template-rows: 60px 1fr;
   /* 2 колонки */
   grid-template-columns: 2fr 10fr;
   /* grid-gap: 10px; */
 }
 
-
-
+.app-wrapper-content {
+  grid-area: content;
+  background-color: rgb(255, 0, 195);
+}
